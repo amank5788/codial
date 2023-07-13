@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= name %></title>
-</head>
-<body>
-    <h1>Welcome <%= name %></h1>
-</body>
-</html>
+<link rel="stylesheet" href="/css/profile.css">
+<div class="container text-center">
+    <img src="https://static.toiimg.com/photo/msid-91171050/91171050.jpg"  alt="<%= user.name %>" srcset="">
+</div>
+<div class="container text-center">
+    <ul class="list-group">
+        <li class="list-group-item">Name: <%= user.name %></li>
+        <li class="list-group-item">Email: <%= user.email %></li>
+    </ul>
+    
+</div>
+    
+
