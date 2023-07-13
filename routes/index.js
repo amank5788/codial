@@ -6,6 +6,7 @@ const HomeController=require('../controllers/HomeController');
 
 router.get('/',HomeController.Home);
 router.use('/users',require('./users'));
+router.use('/post',require('./post'));
 
 
 

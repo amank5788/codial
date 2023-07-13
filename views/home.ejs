@@ -1,6 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="/css/home.css">
-<body>
+<body >
+  <div class="container text-center">
     <h1>Welcome <%= title %></h1>
+    <div class="feed-post">
+        <form action="/post/create" method="post">
+            <textarea name="content" id="content-post" cols="30" rows="10" placeholder="type here..."></textarea>
+            <button type="submit">post</button>
+        </form>
+    </div>
+
+    <div class="container feed contents">
+    
+        <% { if(auth == 1){
+              for( let i of postsl){
+               
+               if(i.user._id.toString() == user._id.toString() ){ %>
+                   <div class="row">
+                       
+                       <div class="col" style="background-color: aquamarine; margin: 5px;">
+                           <p>
+                               <%= i.content %>
+                           </p>
+                           <p> <small>Author:- <%= i.user.name %></small></p>
+                           </div>
+                       </div>
+               <%
+           }
+              
+
+
+               
+
+           }}
+        }
+          
+        %>
+    </div>
+   
+  </div>
+
 </body>
